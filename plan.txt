@@ -1,0 +1,12 @@
+navbar at top with different sections
+-home
+-about me
+-projects
+-socials
+
+python
+java
+c#
+javascript
+html
+css

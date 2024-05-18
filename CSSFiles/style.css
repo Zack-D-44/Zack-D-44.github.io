@@ -1,0 +1,498 @@
+:root{
+
+    --blue:#003049;
+    --red: #D62828;
+    --orange: #F77F00;
+    --yellow: #FCBF49;
+    --grey: #EAE2B7;
+}
+
+
+header h1{
+
+    display: block;
+    background-color: #D62828;
+    width: 180px;
+    padding: 10px;
+    border-radius: 10px;
+    color: #ffffff;
+    text-align: center;
+}
+
+
+body{
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+
+/*setting attributes of main navigation bar*/
+.my-nav{
+
+    display: block;/*display determines how element is rendered on page// block creates block level element meaning it takes up all width of parent element so in this case body and starts on new line*/
+    height: 70px;
+    line-height: 50px;/*specifies minimum height of line boxes*/
+    background-color: var(--blue);
+    border-radius: 10px;
+}
+
+
+/*styling list*/
+.my-nav ul{
+    list-style: none;/*takes away bullet points*/
+    padding: 0;
+    margin: 0;
+    margin-left: 70%;
+}
+
+
+/*styling indivdual list items*/
+.my-nav li{
+    float: left;/*makes all elements in list float to left*/
+    
+}
+
+.my-nav li a:hover{
+    background-color: var(--yellow);
+}
+
+.my-nav li a{
+    border-radius: 100px;
+    margin-left: 10px;
+    display: inline-block;
+    text-align: center;
+    padding: 0px 10px;
+    text-decoration: none;
+    background-color: var(--red);  
+    color: #ffffff;
+    margin-top: 10px;
+    transition: 0.8s;
+}
+
+/*class for active navigation bar menu*/
+.my-nav li a.active{
+    background-color: var(--orange);
+}
+
+.container {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    flex-direction: row;
+    margin: auto;
+    margin-top: 70px;
+    width: 70%;    
+    padding: 10px;
+}
+
+.text-beside-image {
+    flex-grow: 1; 
+    margin-left: 20px;
+    height: auto;
+    width: auto;
+    background-color: var(--blue);
+    padding: 20px;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+    position: relative;
+    cursor: default;
+    
+    
+}
+
+#image-of-me {
+    border-radius: 50%;
+    height: 400px;
+    width: 400px;
+    max-width: 100%;
+    position: relative;
+    left: -1000px; /*appear off screen*/
+    transition: left 1.5s linear;
+}
+
+/* .slide-in{
+    left: 0;
+} */
+
+
+/*#button-to-make-text-appear{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+
+}*/
+
+#button-to-make-text-appear {
+    position: absolute;
+    top: 60%;
+    left: 60%;
+    font-size: 20px;
+    transform: translate(-60%, -60%);
+    background-color: var(--red);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: 0.8s;
+    text-align: center;
+    margin-left: 100px;
+    opacity: 0;
+    
+}
+
+#button-to-make-text-appear:hover{
+    background-color: var(--yellow);
+    
+}
+
+
+#find-out-more{
+    margin-left:56%;
+    background-color: var(--red);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: 0.8s;
+    text-align: center;
+    font-size: 20px;
+    opacity: 0;
+    animation: index-scroll-down 2s infinite linear;
+    position: relative;
+}
+
+#find-out-more:hover{
+    background-color: var(--yellow);
+}
+
+section{
+    display: grid;
+    place-items: center;
+    align-content: start;
+    min-height: 100vh;
+    margin-top: 0;
+    margin-bottom: 0;
+    
+    
+}
+
+
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+
+.show{
+
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.section-headers{
+    width: auto;
+    height: auto;
+    text-align: center;
+    border-radius: 10px;
+    background-color: var(--red);
+    color: #ffffff;
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.education-boxes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#history-box{
+    width: 40%;
+    height: 190px;
+    text-align: center;
+    background-color: var(--blue);
+    border-radius: 10px;
+    color: #ffffff;
+    margin-left: 10px;
+    padding: 16px;
+}
+
+.percentage-bar{
+    width: 20%;
+    height: 20px;
+    border-radius: 5px;
+    background-color: var(--grey);
+     
+
+}
+
+.percentage{
+    height: 20px;
+    border-radius: 5px;
+    background-color: var(--red);
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 30px;
+
+}
+
+.python{
+    width: 67%;
+}
+
+.c-sharp{
+    width: 30%;
+
+}
+
+.java{
+
+    width: 50%;
+}
+
+.java-script{
+
+    width: 43%;
+}
+
+.html{
+    width: 56%;
+}
+.css{
+
+    width: 49%;
+}
+
+.right-facing-arrows img{
+    width: 120px;
+    height: 60px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.language-headers{
+    width: auto;
+    border-radius: 10px;
+    background-color: var(--blue);
+    padding: 10px;
+    color: #ffffff;
+    position: relative;
+    
+    
+}
+
+.language-headers:hover{
+
+    animation: expand-header 2s
+    
+}
+
+@keyframes expand-header {
+    0%{width: auto;}
+    20%{width: 5%; text-align: center; right: 60px;}
+    40%{width: 10%; text-align: center; right: 30px;}
+    60%{width: 15%; text-align: center; left: 40px;}
+    80%{width: 20%; text-align: center; left: 80px;}
+    100%{width: 25%; text-align: center; left: 100px;}
+}
+
+.programming-history-box{
+    width: 80%;
+    height: auto;
+    text-align: center;
+    background-color: var(--blue);
+    border-radius: 10px;
+    color: #ffffff;
+    margin-left: 10px;
+    padding: 16px;
+}
+
+
+.downward-facing-arrow img{
+    height: 150px;
+    width: 120px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+.projects-container{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+.project-container {
+    margin-top: 20px;
+    margin-left: 40px;
+    
+    
+}
+
+
+.project-container img {
+    
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+
+.text-box-inside-project {
+
+    background-color: var(--blue);
+    text-align: center;
+    width: 350px;
+    height: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+.text-box-inside-project p {
+    
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.text-box-inside-project button {
+    
+    font-size: 20px;
+    background-color: var(--red);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: 0.8s;
+    text-align: center;
+    margin-top: 30px;
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.text-box-inside-project button:hover{
+    background-color: var(--yellow);
+    
+}
+
+
+
+.get-in-touch {
+    width: fit-content;
+}
+
+
+.contact-container {
+    width: fit-content;
+    background-color: var(--red);
+    padding: 20px;
+    border-radius: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ffffff;
+    margin-top: 30px;
+
+}
+
+.contact-container button{
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: var(--orange);
+    color: #ffffff;
+    margin-bottom: 12px;
+    margin-right: 10px;
+    font-size: 20px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.contact-container button:hover {
+    background-color: var(--yellow);
+}
+
+.downward-arrow {
+    display: block;
+    width: 10%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+    background: var(--red);
+    border-radius: 30px;
+    text-align: center;
+    color: #ffffff;
+    padding: 10px;
+    animation: scroll-down-animation 2s infinite;
+    position: relative;
+    cursor: default;
+    transition: 0.4s;    
+}
+
+.downward-arrow:hover{
+    border-radius: 10px;
+}
+
+@keyframes scroll-down-animation {
+    from {top:0px;}
+    to{top: 40px;}
+}
+
+@keyframes index-scroll-down {
+    0%{top: 0px;}
+    25%{top: 10px;}
+    50%{top: 20px;}
+    75%{top: 10px;}
+    100%{top: 0px;}
+    
+    
+}
+
+
+
+.social-media-containers{
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+
+
+
+
+
+
+
+
